@@ -1,0 +1,12 @@
+package com.kkbox.openapi;
+
+/**
+ * The example file for secret client info.
+ * After setting your client id & client secret,
+ * rename this file to ClientInfo.java.
+ */
+
+public class ClientInfo {
+    public static String CLIENT_ID = "YOUR_CLIENT_ID";
+    public static String CLIENT_SECRET = "YOUR_CLIENT_SECRET";
+}

@@ -14,6 +14,8 @@ cache:
 
 build:
   stage: build
+  tags:
+    - willy
   script:
   - ./gradlew assembleDebug
   artifacts:

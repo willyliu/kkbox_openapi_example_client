@@ -15,7 +15,7 @@ cache:
 build:
   stage: build
   tags:
-    - willy
+    - docker 
   script:
   - echo -e "package com.kkbox.openapi;\n\npublic class ClientInfo {\n    public static String CLIENT_ID = \"$CLIENT_ID\";\n    public static String CLIENT_SECRET = \"$CLIENT_SECRET\";\n}\n" >> app/src/main/java/com/kkbox/openapi/ClientInfo.java
   - ./gradlew --no-daemon :app:build 

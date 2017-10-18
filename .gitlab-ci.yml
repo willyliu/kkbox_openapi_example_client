@@ -1,4 +1,4 @@
-image: jangrewe/gitlab-ci-android
+image: willyliu/gitlab-ci-android
 
 stages:
 - build
@@ -17,7 +17,8 @@ build:
   tags:
     - willy
   script:
-  - ./gradlew assembleDebug
+  - echo -e "package com.kkbox.openapi;\n\npublic class ClientInfo {\n    public static String CLIENT_ID = \"$CLIENT_ID\";\n    public static String CLIENT_SECRET = \"$CLIENT_SECRET\";\n}\n" >> app/src/main/java/com/kkbox/openapi/ClientInfo.java
+  - ./gradlew --no-daemon :app:build 
   artifacts:
     paths:
     - app/build/outputs/apk/app-debug.apk

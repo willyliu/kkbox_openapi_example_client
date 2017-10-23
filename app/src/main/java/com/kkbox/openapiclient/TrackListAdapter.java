@@ -56,7 +56,7 @@ public class TrackListAdapter extends BaseAdapter{
 
     @Override
     public Object getItem(int i) {
-        return this.items;
+        return this.items.get(i);
     }
 
     @Override

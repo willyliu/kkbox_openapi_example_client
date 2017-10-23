@@ -1,6 +1,5 @@
 package com.kkbox.openapiclient;
 
-import android.support.test.espresso.action.EspressoKey;
 import android.support.test.rule.ActivityTestRule;
 
 import com.google.gson.JsonObject;
@@ -16,11 +15,9 @@ import java.io.InputStreamReader;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.pressImeActionButton;
-import static android.support.test.espresso.action.ViewActions.pressKey;
 import static android.support.test.espresso.action.ViewActions.typeText;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.assertion.ViewAssertions.*;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.anything;
 import static org.mockito.Mockito.when;
@@ -43,25 +40,16 @@ public class MainActivityTest {
     private OpenApiWrapper openApiWrapper;
 
     @Test
-    public void search_NoResult() throws Exception {
-        // Arrange
-        String KEYWORD = "asdfasdf";
-
-        when(openApiWrapper.searchTracks(KEYWORD, 15, 0)).thenReturn(loadJsonObject("no-result.json"));
-        onView(withId(R.id.search_bar)).perform(typeText(KEYWORD + "\n"));
-
-        // onData(anything()).atPosition(2).onChildView(withId(R.id.txtArtist)).check(matches(withText("RiNG-O.TV")));
-    }
-
-    @Test
-    public void search() throws Exception {
+    public void search_FewTracks() throws Exception {
         // Arrange
         String KEYWORD = "aaaaaaaa";
-
         when(openApiWrapper.searchTracks(KEYWORD, 15, 0)).thenReturn(loadJsonObject("2-items.json"));
+
+        // Act
         onView(withId(R.id.search_bar)).perform(typeText(KEYWORD + "\n"));
 
-        // onData(anything()).atPosition(2).onChildView(withId(R.id.txtArtist)).check(matches(withText("RiNG-O.TV")));
+        // Assert
+        onData(anything()).atPosition(1).onChildView(withId(R.id.txtArtist)).check(matches(withText("RiNG-O.TV")));
     }
 
     private JsonObject loadJsonObject(String resource) {

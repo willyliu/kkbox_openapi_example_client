@@ -45,7 +45,7 @@ public class HttpClient {
                 .load(resultUri.toString())
                 .setHeader("Authorization", token)
                 .setHeader("User-Agent", "KKBOX Openapi Android SDK")
-                .setLogging("http-client", Log.DEBUG)
+                .setLogging("http-client", Log.VERBOSE)
                 .asJsonObject();
     }
 }

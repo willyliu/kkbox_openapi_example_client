@@ -17,15 +17,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
+    productFlavors {
+        prod { }
+        mock {
+            applicationIdSuffix '.mock'
+        }
+    }
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+        if (names.contains("mock") && !(variant.buildType.name in ["debug"])) {
+            setIgnore(true);
+        }
+    }}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    androidTestCompile 'org.mockito:mockito-android:2.11.0'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.10.0'
     compile 'com.koushikdutta.ion:ion:2.2.1'
 }

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         setContentView(R.layout.activity_main);
 
         // request access token
-        openApi = new OpenApiWrapper(getApplicationContext()).init();
+        openApi = Injection.provideOpenApiWrapper().init();
         presenter = new MainPresenter(this, openApi);
 
         //set search view listener

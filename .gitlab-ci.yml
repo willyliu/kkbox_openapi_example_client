@@ -1,0 +1,24 @@
+image: willyliu/gitlab-ci-android
+
+stages:
+- build
+
+before_script:
+- export GRADLE_USER_HOME=$(pwd)/.gradle
+- chmod +x ./gradlew
+
+cache:
+  key: ${CI_PROJECT_ID}
+  paths:
+  - .gradle/
+
+build:
+  stage: build
+  tags:
+    - docker 
+  script:
+  - echo -e "package com.kkbox.openapi;\n\npublic class ClientInfo {\n    public static String CLIENT_ID = \"$CLIENT_ID\";\n    public static String CLIENT_SECRET = \"$CLIENT_SECRET\";\n}\n" >> app/src/main/java/com/kkbox/openapi/ClientInfo.java
+  - ./gradlew --no-daemon :app:build 
+  artifacts:
+    paths:
+    - app/build/outputs/apk/app-debug.apk

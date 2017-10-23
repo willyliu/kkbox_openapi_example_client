@@ -12,8 +12,8 @@
         android:id="@+id/listView"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/search_bar"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar"></ListView>
+        app:layout_constraintStart_toStartOf="@id/search_bar"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"></ListView>
 
     <SearchView
         android:id="@+id/search_bar"

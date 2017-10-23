@@ -1,0 +1,109 @@
+{
+	"tracks": {
+		"data": [{
+			"id": "8qzQcnMMYrrZMYSl4a",
+			"name": "Aaaaaaaaa",
+			"duration": 57957,
+			"url": "https:\/\/event.kkbox.com\/content\/song\/8qzQcnMMYrrZMYSl4a",
+			"track_number": 10,
+			"explicitness": true,
+			"available_territories": ["TW", "HK", "SG", "MY", "JP"],
+			"album": {
+				"id": "P_kJtJeOKjgS7ysEA_",
+				"name": "House.xct_",
+				"url": "https:\/\/event.kkbox.com\/content\/album\/P_kJtJeOKjgS7ysEA_",
+				"explicitness": true,
+				"available_territories": ["TW", "HK", "SG", "MY", "JP"],
+				"release_date": "2016-08-30",
+				"images": [{
+					"height": 160,
+					"width": 160,
+					"url": "https:\/\/i.kfs.io\/album\/global\/18076559,0v1\/fit\/160x160.jpg"
+				}, {
+					"height": 500,
+					"width": 500,
+					"url": "https:\/\/i.kfs.io\/album\/global\/18076559,0v1\/fit\/500x500.jpg"
+				}, {
+					"height": 1000,
+					"width": 1000,
+					"url": "https:\/\/i.kfs.io\/album\/global\/18076559,0v1\/fit\/1000x1000.jpg"
+				}],
+				"artist": {
+					"id": "Kk2mEtlinYMj-uKzTe",
+					"name": "Other Families",
+					"url": "https:\/\/event.kkbox.com\/content\/artist\/Kk2mEtlinYMj-uKzTe",
+					"images": [{
+						"height": 160,
+						"width": 160,
+						"url": "https:\/\/i.kfs.io\/artist\/global\/6389251,0v3\/fit\/160x160.jpg"
+					}, {
+						"height": 300,
+						"width": 300,
+						"url": "https:\/\/i.kfs.io\/artist\/global\/6389251,0v3\/fit\/300x300.jpg"
+					}]
+				}
+			}
+		}, {
+			"id": "4k_lcWzPWkaL9AI6Ow",
+			"name": "DaAAAAAaaaa!! (ULTRAMEN Voice)",
+			"duration": 6408,
+			"url": "https:\/\/event.kkbox.com\/content\/song\/4k_lcWzPWkaL9AI6Ow",
+			"track_number": 23,
+			"explicitness": false,
+			"available_territories": ["TW", "HK", "SG", "MY"],
+			"album": {
+				"id": "HXnxL0PcRr3eNvkO_2",
+				"name": "Variety Box-Sound Vol.3",
+				"url": "https:\/\/event.kkbox.com\/content\/album\/HXnxL0PcRr3eNvkO_2",
+				"explicitness": false,
+				"available_territories": ["TW", "HK", "SG", "MY"],
+				"release_date": "2017-01-01",
+				"images": [{
+					"height": 160,
+					"width": 160,
+					"url": "https:\/\/i.kfs.io\/album\/global\/24408334,0v1\/fit\/160x160.jpg"
+				}, {
+					"height": 500,
+					"width": 500,
+					"url": "https:\/\/i.kfs.io\/album\/global\/24408334,0v1\/fit\/500x500.jpg"
+				}, {
+					"height": 1000,
+					"width": 1000,
+					"url": "https:\/\/i.kfs.io\/album\/global\/24408334,0v1\/fit\/1000x1000.jpg"
+				}],
+				"artist": {
+					"id": "Ck3zmcD9LnwAfI9GHE",
+					"name": "RiNG-O.TV",
+					"url": "https:\/\/event.kkbox.com\/content\/artist\/Ck3zmcD9LnwAfI9GHE",
+					"images": [{
+						"height": 160,
+						"width": 160,
+						"url": "https:\/\/i.kfs.io\/artist\/global\/8112698,0v7\/fit\/160x160.jpg"
+					}, {
+						"height": 300,
+						"width": 300,
+						"url": "https:\/\/i.kfs.io\/artist\/global\/8112698,0v7\/fit\/300x300.jpg"
+					}]
+				}
+			}
+		}],
+		"paging": {
+			"offset": 0,
+			"limit": 15,
+			"previous": null,
+			"next": null
+		},
+		"summary": {
+			"total": 2
+		}
+	},
+	"paging": {
+		"offset": 0,
+		"limit": 15,
+		"previous": null,
+		"next": null
+	},
+	"summary": {
+		"total": 2
+	}
+}
